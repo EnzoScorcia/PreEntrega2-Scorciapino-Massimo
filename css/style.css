@@ -7,6 +7,9 @@
     font-family: Quicksand, sans-serif;
 }
 
+
+
+
 /*?----NAV-Y-FOOTER----*/
 
 /*!----NAV----*/
@@ -17,6 +20,15 @@ header {
     border-style: solid;
 }
 
+nav {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.container-fluid {
+    background-color: #13d60856 !important;
+}
+
 .linklista {
     color: black;
     padding: 0 5px;
@@ -25,8 +37,8 @@ header {
 
 a:hover {
     background-color: #003800;
-    color: rgb(255, 255, 255);
-    border-radius: 10px;
+    color: rgb(255, 255, 255) !important;
+    border-radius: 10px !important;
 }
 
 h1 {
@@ -34,6 +46,8 @@ h1 {
     font-family: Quicksand, sans-serif;
     text-align: center;
     text-decoration: underline;
+    background-color: #22bb11c5 !important;
+    margin: 0px !important;
 }
 
 .lista {
@@ -162,7 +176,7 @@ footer {
     grid-area: aside;
 }
 
-main {
+.mainindex {
     background-color: #108b2fb9;
     border-style: solid;
     border-left: #0b1f08;
@@ -195,7 +209,7 @@ main {
 }
 
 .h2p {
-    width: 300px;
+    width: 350px;
 }
 
 .muestra {
@@ -279,15 +293,132 @@ aside {
 
 /*?----ORIGEN----*/
 
+.accordion-item {
+    background-color: #19960cab !important;
+}
 
+.accordion-item button {
+    background-color: #19f800a4 !important;
+}
+
+.accordion-body p {
+    text-align: center;
+    font-size: 20px;
+}
 
 /*?----ESPECIES----*/
 
+.especiesh1 {
+    font-size: 50px;
+    background-color: #19960cab;
+}
+
+.carouselbox {
+    display: flex;
+    justify-content: center;
+    background-color: #19960cab;
+    border: #0b1f08;
+    border-style: solid;
+    padding: 25px;
+}
+
+.carousel-inner {
+    width: 800px !important;
+    height: auto !important;
+}
+
+.tallo1 {
+    text-align: center;
+}
+
+.tallo1 p {
+    font-size: 22px;
+}
+
+.tallo {
+    text-decoration: underline;
+    text-align: center;
+    font-size: 35px;
+}
+
+.galeriaespecies {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 300px 300px 300px;
+    row-gap: 25px;
+    column-gap: 25px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "especie1 especie2 especie2"
+        "especie1 especie3 especie3"
+        "especie4 especie3 especie3";
+    padding: 30px;
+    justify-content: center;
+}
+
+.especie1 {
+    grid-area: especie1;
+}
+
+.especie1 h2 {
+    position: absolute;
+    display: block;
+    background-color: rgba(128, 128, 128, 0.404);
+}
+
+.especie2 {
+    grid-area: especie2;
+}
+
+.especie2 h2 {
+    position: absolute;
+    display: block;
+    background-color: rgba(128, 128, 128, 0.404);
+}
+
+.especie3 {
+    grid-area: especie3;
+}
+
+.especie3 h2 {
+    position: absolute;
+    display: block;
+    background-color: rgba(128, 128, 128, 0.404);
+}
+
+.especie4 {
+    grid-area: especie4;
+}
+
+.especie4 h2 {
+    position: absolute;
+    display: block;
+    background-color: rgba(128, 128, 128, 0.404);
+}
 
 
-/*?----DISEÑO----*/
+/*?----COMPRAR----*/
 
 
+.cards {
+    display: flex;
+}
+
+div h1 {
+    background-color: #1a8014;
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+.card {
+    height: 250px;
+    width: 200px;
+}
+
+.card img {
+    height: 250px;
+    width: 100%;
+}
 
 /*?----CULTIVO----*/
 
@@ -295,7 +426,12 @@ aside {
 
 /**----MEDIA QUERY----*/
 
-
+@media screen and (max-width: 1375px) {
+    .carouselbox {
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 @media screen and (max-width: 1200px) {
     .galeria {
@@ -320,6 +456,13 @@ aside {
     }
 }
 
+@media screen and (max-width: 955px) {
+    .galeriaespecies {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 @media screen and (max-width:850px) {
     header {
         font-size: medium;
@@ -327,6 +470,17 @@ aside {
 
     h1 {
         font-size: x-large;
+    }
+}
+
+@media screen and (max-width: 835px){
+    .carousel-inner div img{
+        width: 400px !important;
+        height: 300px;
+    }
+    .carousel-inner{
+        width: 400px !important;
+        height: 300px !important;
     }
 }
 
@@ -361,6 +515,17 @@ aside {
     }
 }
 
+@media screen and (max-width: 635px){
+    .especie2 img{
+        width: 400px;
+        height: auto;
+    }
+    .especie3 img{
+        width: 400px;
+        height: auto;
+    }
+}
+
 @media screen and (max-width: 620px) {
     .lista {
         display: flex;
@@ -382,6 +547,38 @@ aside {
     .footerimg img {
         width: 200px;
         height: auto;
+    }
+
+    .footerlist ul {
+        padding-left: 0px;
+    }
+}
+
+@media screen and (max-width: 439px){
+    .especie1 img{
+        width: 250px;
+        height: auto;
+    }
+    .especie2 img{
+        width: 250px;
+        height: auto;
+    }
+    .especie3 img{
+        width: 250px;
+        height: auto;
+    }
+    .especie4 img{
+        width: 250px;
+        height: auto;
+    }
+
+    .carousel-inner div img{
+        width: 300px !important;
+        height: 200px;
+    }
+    .carousel-inner{
+        width: 300px !important;
+        height: 200px !important;
     }
 }
 
